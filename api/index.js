@@ -8,7 +8,8 @@ export default function handler(req, res) {
         method: req.method,
         headers: {
             ...req.headers,
-            host: '5.75.193.168'
+            'host': '5.75.193.168',
+            'connection': 'keep-alive'
         }
     };
 
