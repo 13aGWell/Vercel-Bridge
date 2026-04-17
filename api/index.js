@@ -7,9 +7,8 @@ export default function handler(req, res) {
         path: '/darbasti',
         method: req.method,
         headers: {
-            'Host': '5.75.193.168', // اجباری برای شناسایی در مقصد
-            'Connection': 'upgrade', // برای حمایت از وب‌سوکت
-            'Upgrade': 'websocket'
+            ...req.headers,
+            host: '5.75.193.168'
         }
     };
 
@@ -19,9 +18,5 @@ export default function handler(req, res) {
     });
 
     req.pipe(proxy);
-
-    proxy.on('error', (e) => {
-        console.error("Vercel Proxy Error:", e.message);
-        res.status(502).json({ error: "Gateway Error", details: e.message });
-    });
+    proxy.on('error', (e) => res.status(502).end(e.message));
 }
