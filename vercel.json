@@ -1,8 +1,9 @@
 {
+  "version": 2,
   "rewrites": [
     {
-      "source": "/(.*)",
-      "destination": "http://5.75.193.168:8080/$1"
+      "source": "/darbasti",
+      "destination": "http://5.75.193.168:8080/darbasti"
     }
   ]
 }
