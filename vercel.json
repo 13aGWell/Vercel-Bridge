@@ -3,7 +3,7 @@
   "rewrites": [
     {
       "source": "/darbasti",
-      "destination": "http://5.75.193.168/darbasti"
+      "destination": "/api/index"
     }
   ]
 }
