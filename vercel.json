@@ -1,6 +1,9 @@
 {
   "version": 2,
   "rewrites": [
-    { "source": "/darbasti", "destination": "/api" }
+    {
+      "source": "/darbasti",
+      "destination": "/api/index"
+    }
   ]
 }
